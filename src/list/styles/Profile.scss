@@ -1,0 +1,95 @@
+.profbox {
+  width: 80%;
+  height: 100%;
+  margin-left: 10%;
+  padding: 0.6%;
+  background-color: rgba(248, 244, 244, 0.744);
+  display: row;
+}
+.set {
+  display: inline;
+}
+
+.iconsel:hover {
+  animation-name: sel;
+  width: 10.5%;
+  height: 10.5%;
+  animation-iteration-count: infinite;
+  animation-duration: 800ms;
+  transition: 300ms;
+  animation-timing-function: ease-in-out;
+}
+.iconad:hover {
+  animation-name: ad;
+  width: 10.5%;
+  height: 10.5%;
+  animation-iteration-count: infinite;
+  animation-duration: 850ms;
+  transition: 300ms;
+  animation-timing-function: ease-in-out;
+}
+.icondel:hover {
+  animation-name: del;
+  width: 10.5%;
+  height: 10.5%;
+  animation-iteration-count: infinite;
+  animation-duration: 650ms;
+  transition: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-play-state: running;
+}
+
+.hide {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+}
+@keyframes sel {
+  40% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes ad {
+  40% {
+    transform: rotateZ(10deg);
+  }
+  60% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(180deg);
+  }
+}
+@keyframes del {
+  20% {
+    transform: rotateZ(20deg);
+  }
+  40% {
+    transform: rotateZ(-20deg);
+  }
+  60% {
+    transform: rotateZ(20deg);
+  }
+  80% {
+    transform: rotateZ(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@media screen and (max-width: 1250px) {
+  .profimg {
+    margin-left: 25%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .profimg {
+    margin-left: 20%;
+  }
+}
